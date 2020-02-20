@@ -25,4 +25,15 @@ pacientes.forEach(paciente => {
         tdIMC.textContent = imc.toFixed(2);
     }
 });
-    
+
+let titulo = document.querySelector("#titulo");
+titulo.onclick = mostrarMensagem;
+
+function mostrarMensagem(){
+    console.log("evento aconteceu");
+}
+
+function trocarCor(){
+    let cor = parseInt(Math.random()*255);
+    titulo.style.color = "rgb(" +cor+ "," +cor+ "," +cor+ ")";
+}
