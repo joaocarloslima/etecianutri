@@ -26,14 +26,29 @@ pacientes.forEach(paciente => {
     }
 });
 
-let titulo = document.querySelector("#titulo");
-titulo.onclick = mostrarMensagem;
+let botao = document.querySelector("#botao-cadastrar");
 
-function mostrarMensagem(){
-    console.log("evento aconteceu");
-}
+botao.addEventListener("click", function (evento){
+    evento.preventDefault();
 
-function trocarCor(){
-    let cor = parseInt(Math.random()*255);
-    titulo.style.color = "rgb(" +cor+ "," +cor+ "," +cor+ ")";
-}
+    //pegar valores do form
+    let formulario = document.querySelector("#form-paciente");
+    let nome    = formulario.nome.value;
+    let peso    = formulario.peso.value;
+    let altura  = formulario.altura.value;
+    let gordura = formulario.gordura.value;
+
+    //criar linha
+    let table = document.querySelector("#tabela-pacientes");
+    let tr = document.createElement("tr");
+    tr.classList.add("paciente");
+    
+    //criar td nome
+    let tdNome = document.createElement("td");
+    tdNome.textContent = nome;
+    tr.appendChild(tdNome);
+
+    table.appendChild(tr);
+
+    //console.log(tr);
+});
