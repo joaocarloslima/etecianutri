@@ -78,14 +78,15 @@
 
         <section class="container">
             <h2>Cadastrar Paciente</h2>
+            <span id="mensagem-erro"></span>
             <form id="form-paciente">
                 <div class="grupo">
                     <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" placeholder="digite o nome do paciente" class="campo">
+                    <input type="text" id="nome" name="nome" placeholder="digite o nome do paciente" class="campo" required>
                 </div>
                 <div class="grupo">
                     <label for="peso">Peso</label>
-                    <input type="text" id="peso" name="peso" placeholder="digite o peso do paciente" class="campo">
+                    <input type="number" id="peso" name="peso" placeholder="digite o peso do paciente" class="campo" min="1" max="1000">
                 </div>
                 <div class="grupo">
                     <label for="altura">Altura</label>
@@ -103,6 +104,7 @@
 
 </body>
 
-<script src="js/main.js"></script>
+<script src="js/calcular-imc.js"></script>
+<script src="js/formulario.js"></script>
 
 </html>
