@@ -136,3 +136,19 @@ button[disabled=disabled], button:disabled {
 .paciente-invalido{
 	background-color: lightcoral;
 }
+
+.fadeOut{
+	opacity: 0;
+	transition: 1s;
+}
+
+#filtro{
+	width: 300px;
+	font-size: 14pt;
+	margin-bottom: 10px; 
+
+}
+
+.oculto{
+	display: none;
+}
